@@ -3,17 +3,17 @@ import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 @Entity()
 export class CSV {
     @PrimaryGeneratedColumn()
-    id:number;
+    id: number;
 
     @Column()
-    username:string;
+    username: string;
 
     @Column()
-    identifier:number;
-    
+    identifier: number;
+
     @Column()
-    first_name:string;
-    
+    first_name: string;
+
     @Column()
-    last_name:string;
+    last_name: string;
 }

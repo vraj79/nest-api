@@ -11,7 +11,7 @@ export class CsvService {
     async processCsv(file: Express.Multer.File) {
         const csvContent = file.buffer.toString("utf-8");
         const rows = csvContent.split("\n");
-        let columnCount=rows[0].split(";").length;
+        let columnCount = rows[0].split(";").length;
         rows.splice(0, 1)
 
         for (let i = 0; i < rows.length; i++) {
@@ -24,6 +24,6 @@ export class CsvService {
             await this.csvRepository.save(user);
         }
 
-        return { message: 'CSV file processed successfully.',columnCount };
+        return { message: 'CSV file processed successfully.', columnCount };
     }
 }

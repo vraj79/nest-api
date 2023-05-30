@@ -5,8 +5,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { CSV } from './entities/csv.entity';
 
 @Module({
-  imports:[TypeOrmModule.forFeature([CSV])],
+  imports: [TypeOrmModule.forFeature([CSV])],
   controllers: [CsvController],
   providers: [CsvService]
 })
-export class CsvModule {}
+export class CsvModule { }
